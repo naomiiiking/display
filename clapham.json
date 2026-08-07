@@ -1,0 +1,235 @@
+{
+  "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+  "naptanId": "940GZZLUCPC",
+  "modes": [
+    "tube"
+  ],
+  "icsCode": "1000050",
+  "stopType": "NaptanMetroStation",
+  "stationNaptan": "940GZZLUCPC",
+  "lines": [
+    {
+      "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+      "id": "northern",
+      "name": "Northern",
+      "uri": "/Line/northern",
+      "type": "Line",
+      "crowding": {
+        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+      },
+      "routeType": "Unknown",
+      "status": "Unknown"
+    }
+  ],
+  "lineGroup": [
+    {
+      "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+      "stationAtcoCode": "940GZZLUCPC",
+      "lineIdentifier": [
+        "northern"
+      ]
+    }
+  ],
+  "lineModeGroups": [
+    {
+      "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+      "modeName": "tube",
+      "lineIdentifier": [
+        "northern"
+      ]
+    }
+  ],
+  "status": true,
+  "id": "940GZZLUCPC",
+  "commonName": "Clapham Common Underground Station",
+  "placeType": "StopPoint",
+  "additionalProperties": [
+    {
+      "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+      "category": "ServiceInfo",
+      "key": "Night",
+      "sourceSystemKey": "TransXchangeETL",
+      "value": "yes"
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+      "category": "Facility",
+      "key": "Ticket Halls",
+      "sourceSystemKey": "StaticObjects",
+      "value": "1"
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+      "category": "Facility",
+      "key": "WiFi",
+      "sourceSystemKey": "StaticObjects",
+      "value": "yes"
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+      "category": "Facility",
+      "key": "Escalators",
+      "sourceSystemKey": "StaticObjects",
+      "value": "2"
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+      "category": "Address",
+      "key": "PhoneNo",
+      "sourceSystemKey": "StaticObjects",
+      "value": "0845 330 9880"
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+      "category": "Address",
+      "key": "Address",
+      "sourceSystemKey": "StaticObjects",
+      "value": "Clapham Common Station,London Underground Ltd.,The Pavement,London,SW4 7AJ"
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+      "category": "Facility",
+      "key": "Gates",
+      "sourceSystemKey": "StaticObjects",
+      "value": "5"
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+      "category": "Facility",
+      "key": "Toilets",
+      "sourceSystemKey": "StaticObjects",
+      "value": "no"
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+      "category": "Facility",
+      "key": "Bridge",
+      "sourceSystemKey": "StaticObjects",
+      "value": "no"
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+      "category": "Facility",
+      "key": "Lifts",
+      "sourceSystemKey": "StaticObjects",
+      "value": "0"
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+      "category": "Facility",
+      "key": "Photo Booths",
+      "sourceSystemKey": "StaticObjects",
+      "value": "0"
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+      "category": "Facility",
+      "key": "Waiting Room",
+      "sourceSystemKey": "StaticObjects",
+      "value": "no"
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+      "category": "Facility",
+      "key": "Cash Machines",
+      "sourceSystemKey": "StaticObjects",
+      "value": "0"
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+      "category": "Facility",
+      "key": "Payphones",
+      "sourceSystemKey": "StaticObjects",
+      "value": "1"
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+      "category": "Geo",
+      "key": "Zone",
+      "sourceSystemKey": "StaticObjects",
+      "value": "2"
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+      "category": "Facility",
+      "key": "Car park",
+      "sourceSystemKey": "StaticObjects",
+      "value": "no"
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+      "category": "Facility",
+      "key": "Help Points",
+      "sourceSystemKey": "StaticObjects",
+      "value": "5 on platforms, 1 in ticket halls, 1 elsewhere"
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+      "category": "Facility",
+      "key": "Other Facilities",
+      "sourceSystemKey": "StaticObjects",
+      "value": "electronic whiteboards in ticket hall"
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+      "category": "NearestPlaces",
+      "key": "SourceSystemPlaceId",
+      "sourceSystemKey": "StaticObjects",
+      "value": "BikePoints_355"
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+      "category": "NearestPlaces",
+      "key": "SourceSystemPlaceId",
+      "sourceSystemKey": "StaticObjects",
+      "value": "TaxiRank_5793"
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+      "category": "NearestPlaces",
+      "key": "SourceSystemPlaceId",
+      "sourceSystemKey": "StaticObjects",
+      "value": "TaxiRank_5787"
+    }
+  ],
+  "children": [
+    {
+      "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+      "naptanId": "9400ZZLUCPC1",
+      "modes": [],
+      "icsCode": "1000050",
+      "stationNaptan": "940GZZLUCPC",
+      "lines": [],
+      "lineGroup": [],
+      "lineModeGroups": [],
+      "status": true,
+      "id": "9400ZZLUCPC1",
+      "commonName": "Clapham Common Underground Station",
+      "placeType": "StopPoint",
+      "additionalProperties": [],
+      "children": [],
+      "lat": 0.0,
+      "lon": 0.0
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+      "naptanId": "9400ZZLUCPC2",
+      "modes": [],
+      "icsCode": "1000050",
+      "stationNaptan": "940GZZLUCPC",
+      "lines": [],
+      "lineGroup": [],
+      "lineModeGroups": [],
+      "status": true,
+      "id": "9400ZZLUCPC2",
+      "commonName": "Clapham Common",
+      "placeType": "StopPoint",
+      "additionalProperties": [],
+      "children": [],
+      "lat": 0.0,
+      "lon": 0.0
+    }
+  ],
+  "lat": 51.461742,
+  "lon": -0.138317
+}
