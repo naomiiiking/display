@@ -1,7 +1,10 @@
 from clients.tfl import tflClient
+from clients.weather import weatherClient
+import os
 
 tfl = tflClient()
+weather = weatherClient()
 
-print(tfl.station_id)
 
 tfl.get_arrivals()
+weather.get_weather()

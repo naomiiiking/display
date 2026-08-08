@@ -1,9 +1,12 @@
 # TFL Client
-import requests, json
+import requests, json, os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class tflClient:
     def __init__(self):
-        self.station_id = "940GZZLUCPC"
+        self.station_id = os.environ["STATION_ID"]
         self.arrivals_url = f"https://api.tfl.gov.uk/StopPoint/{self.station_id}/arrivals"
 
     def get_arrivals(self):
