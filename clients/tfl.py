@@ -14,8 +14,7 @@ class tflClient:
             resp = requests.get(self.arrivals_url)
             resp.raise_for_status
             status = resp.json()
-            with open('output.json', 'w') as file:
-                json.dump(status, file, indent=2)
+
             for arrival in status:
                 time_to_station = int(float(arrival.get("timeToStation")) / 60)
                 platform = arrival.get("platformName")
