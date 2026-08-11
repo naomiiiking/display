@@ -8,22 +8,24 @@ class newsClient():
         self.api_key = os.environ.get("NEWS_API_KEY")
         self.country = "gb"
 
-    def get_news(self, source, category, keyword):
+    def get_news(self, source, keyword):
         url = f"https://newsapi.org/v2/top-headlines?sources={source}&q={keyword}&apiKey={self.api_key}"
         try:
             resp = requests.get(url)
             resp.raise_for_status
             resp = resp.json()
 
+            output = ""
             articles = resp.get("articles")
-            output = f"News: {category}"
+            articles = articles[:3]
+
             for article in articles:
                 title = article.get("title")
                 title = title.replace("| TechCrunch", "")
                 output += f"\n - {title}"
 
-            print(output)
+            return output
         except requests.RequestException as e:
-            print(f"Error fetching data: {e}")
+            return f"Error fetching news data: {e}"
 
 #sources wired, bbc-news, techcrunch, the-next-web, the-verge
