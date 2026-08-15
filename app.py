@@ -3,10 +3,10 @@ from clients.weather import weatherClient
 from clients.spotify import spotifyClient
 from clients.news import newsClient
 from PIL import Image, ImageDraw, ImageFont
-from reportlab.graphics.renderPM import drawToPIL, Drawing
+from dotenv import load_dotenv
+import os
 
-from svglib.svglib import svg2rlg
-
+load_dotenv()
 
 class App:
     def __init__(self):
@@ -18,10 +18,16 @@ class App:
         self.padding_top = 5
         self.padding_left = 10
 
+        self.env = os.environ['ENV']
+        if(self.env=="pi"):
+            from inky.auto import auto
+
         self.tube_logo = Image.open("assets/tube-icon.png") # London icons created by Vitaly Gorbachev - Flaticon
     def run(self):
         #weather.get_weather()
         #spotify.get_playback()
+        if(self.env=="pi"):
+            display = auto()
 
         out = Image.new("RGB", self.dimensions, (255, 255, 255))
 
@@ -45,4 +51,9 @@ class App:
         d.text((self.padding_left, self.padding_top + 230), "Tech news", font=fnt_h2, fill=(0,0,0))
         d.multiline_text((self.padding_left, self.padding_top + 235), f"{news_ai}", font=fnt_txt, fill=(0, 0, 0))
 
-        out.show()
+        if(self.env=="pi"):
+            display.set_image(out)
+        else:
+            out.show()
+
+

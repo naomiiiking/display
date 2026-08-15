@@ -7,9 +7,7 @@ requires-python = ">=3.12"
 dependencies = [
     "dotenv>=0.9.9",
     "pillow>=12.3.0",
-    "reportlab>=5.0.0",
     "requests>=2.34.2",
     "ruff>=0.16.3",
     "spotipy>=2.26.0",
-    "svglib>=2.2.0",
 ]
