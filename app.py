@@ -24,6 +24,7 @@ class App:
 
         self.tube_logo = Image.open("assets/tube-icon.png") # London icons created by Vitaly Gorbachev - Flaticon
     def run(self):
+        print("running...")
         #weather.get_weather()
         #spotify.get_playback()
         while(True):
