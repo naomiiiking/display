@@ -5,6 +5,7 @@ from clients.news import newsClient
 from PIL import Image, ImageDraw, ImageFont
 from dotenv import load_dotenv
 import os, time
+from inky.auto import auto
 
 load_dotenv()
 
