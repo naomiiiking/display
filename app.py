@@ -24,10 +24,12 @@ class App:
         #self.news.get_news("bbc-news", "", "")
         out = Image.new("RGB", self.dimensions, (255, 255, 255))
 
-        fnt_txt = ImageFont.truetype("arial.ttf", 10)
-        fnt_h2 = ImageFont.truetype("arial.ttf", 15)
+        fnt_txt = ImageFont.truetype("assets/arial.ttf", 10)
+        fnt_h2 = ImageFont.truetype("assets/arial.ttf", 15)
         d = ImageDraw.Draw(out)
 
+        ##### Tube section
+        
 
         ##### News section
         news = self.news.get_news("bbc-news", "")
