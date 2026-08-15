@@ -3,6 +3,9 @@ from clients.weather import weatherClient
 from clients.spotify import spotifyClient
 from clients.news import newsClient
 from PIL import Image, ImageDraw, ImageFont
+from reportlab.graphics.renderPM import drawToPIL, Drawing
+
+from svglib.svglib import svg2rlg
 
 
 class App:
@@ -15,13 +18,11 @@ class App:
         self.padding_top = 5
         self.padding_left = 10
 
+        self.tube_logo = Image.open("assets/tube-icon.png") # London icons created by Vitaly Gorbachev - Flaticon
     def run(self):
-        #tfl.get_arrivals()
         #weather.get_weather()
         #spotify.get_playback()
 
-        #self.news.get_news("techcrunch", "Tech", "AI")
-        #self.news.get_news("bbc-news", "", "")
         out = Image.new("RGB", self.dimensions, (255, 255, 255))
 
         fnt_txt = ImageFont.truetype("assets/arial.ttf", 10)
@@ -29,7 +30,11 @@ class App:
         d = ImageDraw.Draw(out)
 
         ##### Tube section
-        
+        arrivals = self.tfl.get_arrivals()
+        #out.paste(self.tube_logo, (20, 20))
+
+        d.text((self.padding_left, self.padding_top + 60), "Tube Arrivals", font=fnt_h2, fill=(0,0,0))
+        d.multiline_text((self.padding_left, self.padding_top + 65), f"{arrivals}", font=fnt_txt, fill=(0, 0, 0))
 
         ##### News section
         news = self.news.get_news("bbc-news", "")
