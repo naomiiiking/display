@@ -22,7 +22,6 @@ class App:
 
     def get_greeting(self):
         current_time = (datetime.now()).hour
-        print(current_time)
         if current_time < 12:
             return "Good morning"
         elif current_time < 19:
@@ -42,7 +41,8 @@ class App:
             out = Image.new("RGB", self.dimensions, (255, 255, 255))
 
             fnt_h1 = ImageFont.truetype("assets/arial.ttf", 30)
-            fnt_txt = ImageFont.truetype("assets/arial.ttf", 17)
+            fnt_txt = ImageFont.truetype("assets/arial.ttf", 20)
+            fnt_date = ImageFont.truetype("assets/Arial Bold.ttf", 60)
             d = ImageDraw.Draw(out)
 
             greeting = self.get_greeting()
@@ -60,11 +60,18 @@ class App:
 
             sunset_icon = Image.open("assets/sunset.png")
             out.paste(sunset_icon, (self.padding_left, self.padding_top + 105), sunset_icon)
-            d.text((self.padding_left + 35, self.padding_top + 115),f"{current_weather[0][3]}", font=fnt_txt, fill=(0,0,0))
-            
+            d.text((self.padding_left + 35, self.padding_top + 113),f"{current_weather[0][3]}", font=fnt_txt, fill=(0,0,0))
+
+            ##### Date section
+            current_time = datetime.now()
+            day = current_time.strftime("%a")
+            date = current_time.strftime("%-d")
+            month = current_time.strftime("%b")
+            d.text((self.padding_left + 15, self.padding_top + 180), f"{day}, {month} {date}", font=fnt_date, fill=(255, 0, 0))
+
             ##### News section
-            news = self.news.get_news("bbc-news", "")
-            d.multiline_text((self.padding_left, self.padding_top + 175), f"{news}", font=fnt_txt, fill=(0, 0, 0))
+            #news = self.news.get_news("bbc-news", "")
+            #d.multiline_text((self.padding_left, self.padding_top + 175), f"{news}", font=fnt_txt, fill=(0, 0, 0))
             #news_ai = self.news.get_news("techcrunch", "")
             #d.multiline_text((self.padding_left, self.padding_top + 235), f"{news_ai}", font=fnt_txt, fill=(0, 0, 0))
 
