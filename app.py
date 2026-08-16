@@ -56,8 +56,9 @@ class App:
 
             if(self.env=="pi"):
                 display.set_image(out)
+                display.show()
             else:
                 out.show()
-            time.sleep(40)
+            time.sleep(3600)
 
 
